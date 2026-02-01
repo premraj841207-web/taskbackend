@@ -19,6 +19,15 @@ mongoose
     process.exit(1);
   });
 
+  app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Task API running 🚀",
+    endpoints: {
+      tasks: "/tasks",
+    },
+  });
+});
 app.use("/tasks", taskRoutes);
 
 app.use(errorHandler);
