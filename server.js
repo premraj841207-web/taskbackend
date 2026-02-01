@@ -62,6 +62,14 @@ app.use(async (req, res, next) => {
 });
 
 // routes
+app.get("/", (req, res) => {
+  res.json({
+    message: "Task API running 🚀",
+    endpoints: {
+      tasks: "/tasks"
+    }
+  });
+});
 app.use("/tasks", taskRoutes);
 
 // error handler
