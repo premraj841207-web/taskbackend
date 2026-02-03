@@ -28,7 +28,7 @@
 
 const express = require("express");
 const router = express.Router();
-const connectDB = require("../config/connectDB");
+const connectDB = require("../config/db");
 
 const {
   getTasks,
